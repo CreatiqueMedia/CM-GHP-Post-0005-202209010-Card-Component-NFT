@@ -1,0 +1,214 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
+*/
+
+/**** All Universal Styles Go Here ****/
+
+:root {
+  --BodyBackgroundColor: hsl(217, 54%, 11%);
+  --CardContainerBackground: hsl(216, 50%, 16%);
+  --CardHeading: hsl(0, 0%, 100%);
+  --CardPrimary: hsl(215, 51%, 70%);
+  --CardFont: "Outfit";
+  --CardSec2Icon1Text: hsl(178, 100%, 50%);
+  --CardSec2Icon2: hsl(178, 100%, 50%);
+  --CardSec3Border: hsl(215, 32%, 27%);
+  --CardSec3Txt2: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--BodyBackgroundColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+/* ++++ Specific Section Styles Go Here ++++ */
+
+/**** Card Container Styles ****/
+
+.card--container {
+  background-color: var(--CardContainerBackground);
+  max-width: 100%;
+  border-radius: 24px;
+  margin: 6% 0 40px 0;
+  width: 400px;
+  line-height: 2;
+}
+
+/**** Section 1 Styles ****/
+
+.card--container--sec--1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: auto;
+}
+
+.card--container--sec--1--img {
+  max-width: 100%;
+  width: 90%;
+  border-radius: 12px;
+  margin: 6%;
+}
+
+.card--container--sec--1--img--overlay {
+  position: relative;
+  max-width: 100%;
+  width: 360px;
+  height: 360px;
+  opacity: 0;
+  transition: 0.5s ease;
+  border-radius: 12px;
+  top: -385px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.card--container--sec--1--img--overlay--icon {
+  opacity: 0.9;
+}
+
+.card--container--sec--1--img--overlay:hover {
+  opacity: 1;
+  transition: 0.5s ease;
+  background-color: rgba(0, 255, 247, 0.6);
+}
+
+.card--container--sec--1--heading {
+  color: var(--CardHeading);
+  display: block;
+  text-align: left;
+  margin: -350px 5% 0 5%;
+  width: 87%;
+}
+
+.card--container--sec--1--text {
+  color: var(--CardPrimary);
+  line-height: 1;
+  margin: 5%;
+  width: 87%;
+}
+
+/**** Section 2 Styles ****/
+
+.card--container--sec--2--icon--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.card--container--sec--2--icon--1 {
+  margin: 0 6px 0 -36px;
+}
+
+.card--container--sec--2--icon--1--text {
+  color: var(--CardSec2Icon1Text);
+  margin: 0 20% 0 0;
+}
+
+.card--container--sec--2--icon--2 {
+  margin: 0 6px 0 0;
+}
+
+.card--container--sec--2--icon--2--text {
+  color: var(--CardPrimary);
+  margin: 0 -20px 0 0;
+}
+
+.card--container--sec--2__partial--border {
+  width: 85%;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  position: relative;
+  left: 7%;
+}
+
+/**** Section 3 Styles ****/
+
+.card--container--sec--3--grid--wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.card--container--sec--3--grid--item {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.card--container--sec--3--grid--item--img {
+  border: solid white;
+  border-radius: 50%;
+  width: 25%;
+  margin: 0 0 0 -45%;
+}
+
+.card--container--sec--3--grid--item--text--1 {
+  color: var(--CardPrimary);
+  margin: 20px 2px 0 -60%;
+}
+
+.card--container--sec--3--grid--item--text--2 {
+  color: var(--CardSec3Txt2);
+}
+
+/**** Footer Styles ****/
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  margin: 0 0 20px 0;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
