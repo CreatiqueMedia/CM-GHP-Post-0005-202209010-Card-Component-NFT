@@ -12,7 +12,7 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Soft blue: hsl(215, 51%, 70%)
+- Soft Blue: hsl(215, 51%, 70%)
 - Cyan: hsl(178, 100%, 50%)
 
 ### Neutral
@@ -39,13 +39,12 @@ The designs were created to the following widths:
 :root {
   --BodyBackgroundColor: hsl(217, 54%, 11%);
   --CardContainerBackground: hsl(216, 50%, 16%);
-  --CardHeading: hsl(0, 0%, 100%);
-  --CardPrimary: hsl(215, 51%, 70%);
+  --CardNeutralWhite: hsl(0, 0%, 100%);
+  --CardPrimarySoftBlue: hsl(215, 51%, 70%);
+  --CardPrimaryCyan: hsl(178, 100%, 50%);
   --CardFont: "Outfit";
-  --CardSec2Icon1Text: hsl(178, 100%, 50%);
-  --CardSec2Icon2: hsl(178, 100%, 50%);
   --CardSec3Border: hsl(215, 32%, 27%);
-  --CardSec3Txt2: hsl(0, 0%, 100%);
+  --CardFooterLinks: hsl(228, 45%, 44%);
 }
 
 *,
@@ -122,7 +121,7 @@ body {
 }
 
 .card--container--sec--1--heading {
-  color: var(--CardHeading);
+  color: var(--CardNeutralWhite);
   display: block;
   text-align: left;
   margin: -350px 5% 0 5%;
@@ -130,7 +129,7 @@ body {
 }
 
 .card--container--sec--1--text {
-  color: var(--CardPrimary);
+  color: var(--CardPrimarySoftBlue);
   line-height: 1;
   margin: 5%;
   width: 87%;
@@ -151,7 +150,7 @@ body {
 }
 
 .card--container--sec--2--icon--1--text {
-  color: var(--CardSec2Icon1Text);
+  color: var(--CardPrimaryCyan);
   margin: 0 20% 0 0;
 }
 
@@ -160,7 +159,7 @@ body {
 }
 
 .card--container--sec--2--icon--2--text {
-  color: var(--CardPrimary);
+  color: var(--CardPrimarySoftBlue);
   margin: 0 -20px 0 0;
 }
 
@@ -185,19 +184,19 @@ body {
 }
 
 .card--container--sec--3--grid--item--img {
-  border: solid white;
+  border: solid var(--CardNeutralWhite);
   border-radius: 50%;
   width: 25%;
   margin: 0 0 0 -45%;
 }
 
 .card--container--sec--3--grid--item--text--1 {
-  color: var(--CardPrimary);
+  color: var(--CardPrimarySoftBlue);
   margin: 20px 2px 0 -60%;
 }
 
 .card--container--sec--3--grid--item--text--2 {
-  color: var(--CardSec3Txt2);
+  color: var(--CardPrimaryCyan);
 }
 
 /**** Footer Styles ****/
@@ -205,10 +204,10 @@ body {
 footer {
   font-size: 11px;
   text-align: center;
-  color: white;
+  color: var(--CardNeutralWhite);
   margin: 0 0 20px 0;
 }
 
 footer a {
-  color: hsl(228, 45%, 44%);
+  color: var(--CardFooterLinks);
 }
